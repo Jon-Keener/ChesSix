@@ -47,44 +47,6 @@ button {
     left: 25px;
 }
 
-.hexagon {
-    /* width: 50px; */
-    /* height: 50px; */
-    
-    width: 50px;
-    height: 28.8675px;
-    background: red;
-    position: relative;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#hexagon::before {
-  content: "";
-  position: absolute;
-  top: -14.43375px; /* was -28.8675px; */
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 25px solid transparent; /* was 50px */
-  border-right: 25px solid transparent; /* was 50px */
-  border-bottom: 14.43375px solid red; /* was 28.8675px */
-}
-#hexagon::after {
-  content: "";
-  position: absolute;
-  bottom: -14.43375px; /* was -28.8675px; */
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 25px solid transparent; /* was 50px */
-  border-right: 25px solid transparent; /* was 50px */
-  border-top: 14.43375px solid red; /* was 28.8675px */
-}
-
-/* *** */
-
 .square {
     width: 50px;
     height: 50px; /* was 27.5px; */
@@ -106,14 +68,14 @@ button {
 }
 
 .black {
-    background: #000000; /* was brown #774C3B, now black */
+    background: #646970; /* Gray 50 */
 }
 
 .grey {
-    background: #808080; /* grey */
+    background: #8c8f94; /* Gray 30 */
 }
 
 .white {
-    background: #FFF8DC; /* was tan #C99468, now cornsilk */
+    background: #c3c4c7; /* Gray 10 */
 }
 
