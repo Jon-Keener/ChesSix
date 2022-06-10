@@ -41,7 +41,7 @@ function loadPosition(position, playerToMove) {
     curPlayer = playerToMove;
 
     // column i and row j
-    for (let i = 0; i < 13 ; i++) { // 12 columns
+    for (let i = 0; i < 12 ; i++) { // 12 columns, but I don't use any in col 12
         for (let j = 0; j < 12; j++) { // 11 rows
             if (position[i][j] != '.') {
                 loadPiece(position[i][j], [i + 1, j + 1]);
