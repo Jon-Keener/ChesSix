@@ -59,8 +59,10 @@ button {
 
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 
-    /* margin-left: 5px; */
-    /* margin-right: 5px; */
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 
 }
 

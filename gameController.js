@@ -6,19 +6,20 @@ let curHeldPieceStartingPosition;
 
 function startGame() {
     const starterPosition = [
+    ['.', '.', '.', '.', '.', '.', '.', 'a', '.', '.', 'a', '.'],
+    ['.', '.', 'a', '.', '.', '.', '.', '.', '.', '.', '.', 'a'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
-    ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
-    ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
-    ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', 'a', 'a', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ];
 
+//  (column, row): (0,0) - (11,10)
 //  0,0  1,0  2,0  3,0  4,0  5,0  6,0  7,0  8,0  9,0  10,0  11,0 //
 //  0,1  1,1  2,1  3,1  4,1  5,1  6,1  7,1  8,1  9,1  10,1  11,1 //
 //  0,2  1,2  2,2  3,2  4,2  5,2  6,2  7,2  8,2  9,2  10,2  11,2 //
@@ -41,8 +42,8 @@ function loadPosition(position, playerToMove) {
     curPlayer = playerToMove;
 
     // column i and row j
-    for (let i = 0; i < 12 ; i++) { // 12 columns, but I don't use any in col 12
-        for (let j = 0; j < 12; j++) { // 11 rows
+    for (let i = 0; i < 11 ; i++) { // 12 columns, but only 11 are used
+        for (let j = 0; j < 11; j++) { // 11 rows
             if (position[i][j] != '.') {
                 loadPiece(position[i][j], [i + 1, j + 1]);
             }
@@ -69,6 +70,7 @@ function loadPiece(piece, position) {
 
 function getPieceImageSource(piece) {
     switch (piece) {
+        case 'a': return 'assets/bx1.png';
         case 'R': return 'assets/black_rook.png';
         case 'N': return 'assets/black_knight.png';
         case 'B': return 'assets/black_bishop.png';
