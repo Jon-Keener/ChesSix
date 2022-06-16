@@ -1,3 +1,2 @@
 # ChesSix
-ChesSix
-A chess variant.
+ChesSix - a chess variant.
