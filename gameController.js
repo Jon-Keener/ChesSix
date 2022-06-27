@@ -7,7 +7,7 @@ let curHeldPieceStartingPosition;
 function startGame() { // 11 rows x 12 columns
     const starterPosition = [
     ['.', '.', '.', 'N', 'B', 'Q', 'K', 'B', 'N', '.', '.', '.'],
-    ['.', '.', 'R', 'P', 'P', 'P', 'P', 'P', 'P', 'R', '.', '.'],
+    ['.', '.', 'R', 'P', 'P', 'P', 'P', 'P', 'R', '.', '.', '.'],
     ['.', '.', 'P', 'P', '.', '.', '.', '.', 'P', 'P', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
@@ -15,7 +15,7 @@ function startGame() { // 11 rows x 12 columns
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', 'p', 'p', '.', '.', '.', '.', 'p', 'p', '.', '.'],
-    ['.', '.', 'r', 'p', 'p', 'p', 'p', 'p', 'p', 'r', '.', '.'],
+    ['.', '.', 'r', 'p', 'p', 'p', 'p', 'p', 'r', '.', '.', '.'],
     ['.', '.', '.', 'n', 'b', 'q', 'k', 'b', 'n', '.', '.', '.'],
     ];
 
@@ -48,11 +48,6 @@ function loadPiece(piece, position) {
     pieceElement.src = getPieceImageSource(piece);
 
     squareElement.appendChild(pieceElement);
-    //gameController.js:62 Uncaught TypeError: Cannot read properties of null (reading 'appendChild')
-    // at loadPiece (gameController.js:62:19)
-    // at loadPosition (gameController.js:47:17)
-    // at startGame (gameController.js:36:5)
-    // at gameController.js:373:1
 }
 
 function getPieceImageSource(piece) {
